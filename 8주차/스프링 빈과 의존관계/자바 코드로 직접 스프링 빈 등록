@@ -1,0 +1,21 @@
+packagehello.hellospring;
+
+importhello.hellospring.repository.MemberRepository;
+importhello.hellospring.repository.MemoryMemberRepository;
+importhello.hellospring.service.MemberService;
+importorg.springframework.context.annotation.Bean;
+importorg.springframework.context.annotation.Configuration;
+
+@Configuration
+publicclassSpringConfig {
+
+    @Bean
+		public MemberService memberService() {
+		return new MemberService(memberRepository());
+    }
+
+    @Bean
+		public MemberRepository memberRepository() {
+		return new MemoryMemberRepository();
+    }
+}
