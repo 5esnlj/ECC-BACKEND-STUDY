@@ -1,0 +1,25 @@
+@Controller
+public classMember Controller {
+
+private final MemberServicememberService;
+
+    @Autowired
+		public MemberController(MemberServicememberService) {
+		this.memberService = memberService;
+    }
+}
+
+@Service
+public class MemberService {
+
+private final MemberRepositorymemberRepository;
+
+    @Autowired
+		public MemberService(MemberRepositorymemberRepository) {
+		this.memberRepository=memberRepository;
+    }
+}
+
+@Repository
+public class MemoryMember Repository implements MemberRepository {
+}
