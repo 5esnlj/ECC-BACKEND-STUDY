@@ -2,8 +2,10 @@
 	{{#commentDtos}}       -- 댓글 목록 순회
 		<div class="card m" id="comments-{{id}}">  -- 댓글 카드 만들고 ID 부여
 			<div class="class-header"> -- 헤더 영역
+				{{nickname}}
 			</div>
 			<div class="card-body"> -- 본문 영역
+				{{body}}
 			</div>
 		</div>
 	{{/commentDtos}}
